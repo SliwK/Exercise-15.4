@@ -14,7 +14,7 @@ multiply(2,4);
 
 //zadanie trzecie
 
-const average = (...items) => [...items].reduce((a,b) => a+b,0)/[...items].length;
+const average = (...items) => items.reduce((a,b) => a+b,0)/items.length;
 average(1,2,3,4,5,6,7,8,9);
 
 //zadanie czwarte
@@ -25,8 +25,9 @@ average(…grades);
 //zadanie piąte
 
 const dane = [1, 4,'Iwona', false, 'Nowak'];
-const [first, second, third, forth, fifth] = dane;
+const [, , third, , fifth] = dane;
 const fullName= {
     firstName: third,
     secondName: fifth
 };
+console.log(fullName);
