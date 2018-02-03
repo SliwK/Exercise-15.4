@@ -30,7 +30,7 @@ average(1, 3, 6, 6) // 4
 Skorzystaj z rest parameters! Funkcję stwórz za pomocą arrow function.
 
 <strong>ODPOWIEDŹ:</strong></br>
-const average = (...items) => [...items].reduce((a,b) => a+b,0)/[...items].length;
+const average = (...items) => items.reduce((a,b) => a+b,0)/items.length;
 
 <strong>Zadanie czwarte</strong></br>
 Stwórz tablicę z ocenami const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1], a następnie w umiejętny sposób przekaż oceny do funkcji average tak, aby otrzymać wynik. Skorzystaj z operatora spread!
@@ -43,10 +43,9 @@ Podczas pracy nad projektem natknąłeś się na bardzo dziwną strukturę danyc
 
 <strong>ODPOWIEDŹ:</strong></br>
 const dane = [1, 4,'Iwona', false, 'Nowak'];
-const [first, second, third, forth, fifth] = dane;
+const [, , third, , fifth] = dane;
 const fullName= {
     firstName: third,
     secondName: fifth
 };
-
-
+console.log(fullName);
